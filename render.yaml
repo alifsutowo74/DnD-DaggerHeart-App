@@ -1,0 +1,9 @@
+# One-click hosting on Render's free tier: https://render.com/deploy
+services:
+  - type: web
+    name: table-of-heroes
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
